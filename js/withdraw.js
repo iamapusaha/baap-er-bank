@@ -8,13 +8,20 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     const withdrawTotalString = withdrawTotalElement.innerText;
     const preWithdrawTotal = parseFloat(withdrawTotalString);
 
-    const currnetWithdrawTotal = preWithdrawTotal + newWithdrawAmount;
 
-    withdrawTotalElement.innerText = currnetWithdrawTotal;
 
     const blanceTotalElemment = document.getElementById('blance-total')
     const blanceTotalElemmentString = blanceTotalElemment.innerText;
     const preBlanceTotal = parseFloat(blanceTotalElemmentString);
+    withdrawField.value = '';
+
+    if (newWithdrawAmount > preBlanceTotal) {
+        alert('bap er bank ato tk poisha nai vai');
+        return;
+    }
+    const currnetWithdrawTotal = preWithdrawTotal + newWithdrawAmount;
+    withdrawTotalElement.innerText = currnetWithdrawTotal;
+
 
     const currentBlanceTotal = preBlanceTotal - newWithdrawAmount;
 
@@ -22,5 +29,5 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
 
 
 
-    withdrawField.value = '';
+
 })
