@@ -19,15 +19,15 @@
             <div class="grid grid-cols-3 gap-5 w-9/12 mx-auto text-white">
                 <div class="bg-green-400 p-8 rounded-md">
                     <h4 class="text-2xl">Deposit</h4>
-                    <h2 class="text-5xl">$00</h2>
+                    <h2 class="text-5xl">$<span id="deposit-total">00</span></h2>
                 </div>
                 <div class="bg-yellow-500 p-8 rounded-md">
                     <h4 class="text-2xl">Withdraw</h4>
-                    <h2 class="text-5xl">$00</h2>
+                    <h2 class="text-5xl">$<span id="withdraw-total">00</span></h2>
                 </div>
                 <div class="bg-violet-500 p-8 rounded-md">
                     <h4 class="text-2xl">Blance</h4>
-                    <h2 class="text-5xl">$1240</h2>
+                    <h2 class="text-5xl">$<span id="blance-total">1240</span></h2>
                 </div>
             </div>
         </section>
@@ -37,7 +37,7 @@
             <div class="grid grid-cols-2 gap-5 w-9/12 mx-auto text-white">
                 <div class="bg-purple-500 p-8 rounded-md">
                     <h4 class="text-2xl mb-3">Please Deposit</h4>
-                    <input class="w-9/12 p-2 rounded block mb-3 text-black" type="number" name="" id="user-password"
+                    <input class="w-9/12 p-2 rounded block mb-3 text-black" type="number" name="" id="deposit-field"
                         placeholder="$ Amount you want to deposit">
 
                     <button id="btn-deposit"
@@ -45,7 +45,7 @@
                 </div>
                 <div class="bg-red-400 p-8 rounded-md">
                     <h4 class="text-2xl mb-3">Please Withdraw</h4>
-                    <input class="w-9/12 p-2 rounded block mb-3 text-black" type="number" name="" id="user-password"
+                    <input class="w-9/12 p-2 rounded block mb-3 text-black" type="number" name="" id="withdraw-field"
                         placeholder="$ Amount you want to deposit">
 
                     <button id="btn-withdraw"
@@ -54,7 +54,8 @@
             </div>
         </section>
     </main>
-
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
 </body>
 
 </html>
